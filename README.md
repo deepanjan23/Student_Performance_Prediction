@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎓 Student Performance Prediction (IBM Project)
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
@@ -129,3 +130,7 @@ You are free to use, modify, and distribute it with attribution.
 
 Developed as part of the **IBM SkillBuild / Internship Project**  
 💙 Built with Flask, Machine Learning, and lots of enthusiasm!
+=======
+# Student_Performance_Prediction
+This ML project predicts a student’s final grade (G3) using factors like age, study time, failures, and attendance. Built for an IBM SkillBuild internship, it helps educators identify at-risk students early. It showcases end-to-end ML — from data preprocessing to Flask-based web deployment.
+>>>>>>> 199a673e6b181ee6f64f5816dd1b2998c005ea05
