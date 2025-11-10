@@ -103,10 +103,10 @@ The dataset used for training and testing comes from the
 ## 📸 Screenshots
 
 **1️⃣ Prediction Page (Home)**
-![Prediction Page](https://github.com/your-username/student-performance-prediction/assets/demo1.png)
+![Prediction Page](https://github.com/deepanjan23/Student_Performance_Prediction/blob/main/assets/prediction_page.png)
 
 **2️⃣ Dashboard Page**
-![Dashboard Page](https://github.com/your-username/student-performance-prediction/assets/demo2.png)
+![Dashboard Page](https://github.com/deepanjan23/Student_Performance_Prediction/blob/main/assets/dashboard_page.png).
 
 ---
 
