@@ -5,7 +5,6 @@
 ![Flask](https://img.shields.io/badge/Flask-WebApp-green)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ScikitLearn-orange)
 ![Bootstrap](https://img.shields.io/badge/UI-Bootstrap5-lightblue)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
@@ -120,12 +119,6 @@ If you'd like to improve the model accuracy or UI design:
 
 ---
 
-## 🧾 License
-
-This project is licensed under the **MIT License**.  
-You are free to use, modify, and distribute it with attribution.
-
----
 
 ## 💡 Acknowledgment
 
