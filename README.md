@@ -7,7 +7,7 @@ It aims to help educators **identify at-risk students early** and take **prevent
 ---
 
 ### 🌐 Live Demo
-🎯 **[Student Performance Prediction][(https://student-performance-prediction-2-a69n.onrender.com/)]**
+🎯 **[Student Performance Prediction](https://student-performance-prediction-2-a69n.onrender.com/)**
 
 ---
 
