@@ -1,94 +1,89 @@
-<<<<<<< HEAD
-# 🎓 Student Performance Prediction (IBM Project)
+## 🧠 Student Performance Prediction using Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Flask](https://img.shields.io/badge/Flask-WebApp-green)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-ScikitLearn-orange)
-![Bootstrap](https://img.shields.io/badge/UI-Bootstrap5-lightblue)
+This project uses **Machine Learning** to predict a student’s **final academic performance (G3 grade)** based on various **social, demographic, and study-related factors** such as age, study time, past failures, and attendance.
+
+It aims to help educators **identify at-risk students early** and take **preventive actions** to improve academic outcomes.
 
 ---
 
-## 📘 Project Overview
-
-**Student Performance Prediction** is a machine learning web application that predicts a student’s **final grade (G3)** based on academic and behavioral attributes such as study time, past failures, and absences.
-
-The goal of this IBM project is to help institutions identify underperforming students early and implement personalized interventions to improve their academic success.
+### 🌐 Live Demo
+🎯 **[View the Web App on Render](https://student-performance-prediction-2-a69n.onrender.com/)**
 
 ---
 
-## 🚀 Key Features
-
-- 📊 Predicts final student grades (G3) using regression models  
-- 🧠 Classifies students as Pass/Fail based on predicted score  
-- 💻 Flask web app for interactive user input and prediction  
-- 🎨 Modern, responsive UI using Bootstrap 5  
-- 📈 Dashboard visualizations (Chart.js):
-  - Study Time vs Final Grade  
-  - Absences vs Final Grade  
-- ☁️ Deployable on IBM Cloud / Watson Studio  
+### 🧩 Features
+- Predicts final student grade using an ML model  
+- Simple and user-friendly Flask web interface  
+- End-to-end ML pipeline: data preprocessing → training → web deployment  
+- Hosted online (always accessible) via **Render**
 
 ---
 
-## 🧩 Tech Stack
-
-| Category | Technology Used |
-|-----------|------------------|
-| **Language** | Python 3 |
-| **Libraries** | Pandas, NumPy, Scikit-learn, Joblib |
-| **Visualization** | Matplotlib, Seaborn, Chart.js |
-| **Web Framework** | Flask |
-| **Frontend** | HTML5, CSS3, Bootstrap 5 |
-| **Deployment** | IBM Cloud / Localhost |
+### 🏗️ Tech Stack
+| Component | Technology |
+|------------|-------------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Flask (Python) |
+| ML Model | Scikit-learn |
+| Deployment | Render |
+| Dataset | Student Performance Data (UCI Repository / CSV) |
 
 ---
 
-## 🗂️ Project Structure
+### 🚀 Installation (Run Locally)
 
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/<your-username>/student-performance-prediction.git
+   cd student-performance-prediction
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run Flask app**
+   ```bash
+   python app.py
+   ```
+   App runs locally at:  
+   `http://127.0.0.1:5000/`
+
+---
+
+### 📁 Project Structure
 ```
-Student_Performance_Prediction/
-│
-├── app.py                        # Flask backend
+├── app.py                     # Flask backend
 ├── student_performance_model.pkl  # Trained ML model
-├── student-mat.csv                # Dataset (UCI)
 ├── templates/
-│   ├── index.html                 # Main prediction page
-│   └── dashboard.html             # Visualization dashboard
-├── static/                        # Optional static files (CSS, JS)
-└── README.md                      # Project documentation
+│   └── index.html             # Webpage template
+├── static/
+│   └── style.css              # Styling (CSS)
+├── requirements.txt           # Dependencies
+└── Procfile                   # Render deployment config
 ```
 
 ---
 
-## 🧠 Machine Learning Workflow
-
-1. **Data Collection:** UCI Student Performance dataset  
-2. **Preprocessing:** Cleaning & selecting relevant features  
-3. **Model Training:** Linear Regression / Random Forest  
-4. **Evaluation:** Using R² Score and Accuracy metrics  
-5. **Deployment:** Flask app for live predictions  
+### 🧮 Model Training Overview
+1. Collected dataset of student academic and personal features.  
+2. Preprocessed data (handling missing values, encoding, scaling).  
+3. Trained regression/classification model to predict final grade.  
+4. Saved trained model as `student_performance_model.pkl`.  
+5. Integrated model into Flask app for real-time predictions.
 
 ---
 
-## ⚙️ How to Run Locally
+### 👨‍💻 Author
+**Deepanjan Das**  
+📧 [Email or GitHub Profile link if you want to add]
 
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/your-username/student-performance-prediction.git
-cd student-performance-prediction
-```
+---
 
-### Step 2: Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### Step 3: Run the Flask App
-```bash
-python app.py
-```
-
-Then open your browser and visit 👉 [(http://127.0.0.1:5000)]
-[(http://127.0.0.1:5000/dashboard)]
+### 🏁 License
+This project is part of an **IBM SkillBuild Internship Project**.  
+For educational and demonstration purposes only.
 
 ---
 
@@ -119,7 +114,6 @@ If you'd like to improve the model accuracy or UI design:
 
 ---
 
-
 ## 💡 Acknowledgment
 
 Developed as part of the **IBM SkillBuild / Internship Project**  
@@ -127,4 +121,3 @@ Developed as part of the **IBM SkillBuild / Internship Project**
 =======
 # Student_Performance_Prediction
 This ML project predicts a student’s final grade (G3) using factors like age, study time, failures, and attendance. Built for an IBM SkillBuild internship, it helps educators identify at-risk students early. It showcases end-to-end ML — from data preprocessing to Flask-based web deployment.
->>>>>>> 199a673e6b181ee6f64f5816dd1b2998c005ea05
