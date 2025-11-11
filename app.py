@@ -1,26 +1,20 @@
 from flask import Flask, request, render_template
 import joblib
 import numpy as np
-import pandas as pd
+from pyngrok import ngrok, conf
+import webbrowser
+import threading
+import time
 
 app = Flask(__name__)
 
-# Load saved model
+# Load your trained ML model
 model = joblib.load("student_performance_model.pkl")
 
-# Load or simulate some student data for visualization
-try:
-    df = pd.read_csv("student-mat.csv", sep=';')
-except FileNotFoundError:
-    # If dataset not available, create dummy data for charts
-    data = {
-        'studytime': np.random.randint(1, 5, 50),
-        'absences': np.random.randint(0, 20, 50),
-        'G1': np.random.randint(5, 20, 50),
-        'G2': np.random.randint(5, 20, 50),
-        'G3': np.random.randint(5, 20, 50)
-    }
-    df = pd.DataFrame(data)
+@app.after_request
+def skip_ngrok_warning(response):
+    response.headers["ngrok-skip-browser-warning"] = "true"
+    return response
 
 @app.route('/')
 def home():
@@ -28,23 +22,27 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    features = [int(x) for x in request.form.values()]
-    final_features = [np.array(features)]
-    prediction = model.predict(final_features)
-    return render_template('index.html', prediction_text=f'Predicted Final Grade: {round(prediction[0], 2)}')
+    try:
+        features = [float(x) for x in request.form.values()]
+        prediction = model.predict([features])[0]
+        return render_template('index.html', prediction_text=f'Predicted Final Grade: {prediction}')
+    except Exception as e:
+        return render_template('index.html', prediction_text=f'Error: {str(e)}')
 
-@app.route('/dashboard')
-def dashboard():
-    # Prepare data for charts
-    studytime = df['studytime'].tolist()
-    absences = df['absences'].tolist()
-    g3 = df['G3'].tolist()
+def start_ngrok():
+    # ✅ Add your ngrok auth token here
+    conf.get_default().auth_token = "35LOsieLr7om6k32Ij4L82ITMiA_6X8UsWA2S4CW8yMCWfPtF"
 
-    return render_template('dashboard.html',
-                           studytime=studytime,
-                           absences=absences,
-                           g3=g3)
+    # Create the tunnel
+    url = ngrok.connect(5000).public_url
+    print(f"🌐 Public URL: {url}")
+    webbrowser.open(url)
+    
+    # Keep tunnel alive
+    while True:
+        time.sleep(3600)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
-
+    # Start ngrok in background
+    threading.Thread(target=start_ngrok, daemon=True).start()
+    app.run(host='0.0.0.0', port=5000)
