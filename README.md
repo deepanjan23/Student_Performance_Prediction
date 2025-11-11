@@ -77,7 +77,7 @@ It aims to help educators **identify at-risk students early** and take **prevent
 
 ### 👨‍💻 Author
 **Deepanjan Das**  
-📧 [Email or GitHub Profile link if you want to add]
+**📧 [GitHub Profile link if you want to add]**[(https://github.com/deepanjan23)]
 
 ---
 
